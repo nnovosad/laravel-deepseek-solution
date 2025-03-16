@@ -15,14 +15,14 @@ class AISolutionServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__.'/../config/config.php' => config_path('config.php'),
+            __DIR__ . '/../config/config.php' => config_path('ai-solution.php'),
         ], 'config');
     }
 
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/config.php', 'aisolution'
+            __DIR__ . '/../config/config.php', 'ai-solution'
         );
 
         $this->app->bind(ClientInterface::class, Client::class);
