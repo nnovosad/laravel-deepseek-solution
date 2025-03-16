@@ -16,13 +16,13 @@
   },
   "autoload": {
     "psr-4": {
-      "NNovosad19\\AISolition\\": "src/"
+      "NNovosad19\\AISolution\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "NNovosad19\\AISolution\\Providers\\AISolutuionServiceProvider"
+        "NNovosad19\\AISolution\\Providers\\AISolutionServiceProvider"
       ],
       "aliases": {
       }
