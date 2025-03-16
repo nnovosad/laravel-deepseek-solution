@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\Solution\Services;
+namespace NNovosad19\AISolution\Services;
 
 use DeepseekPhp\DeepseekClient;
 use Illuminate\Support\Facades\Cache;

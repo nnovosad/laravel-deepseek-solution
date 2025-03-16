@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace NNovosad19\AISolution\Providers;
+
 use NNovosad19\AISolition\Services\AISolution;
 use Spatie\Ignition\Contracts\HasSolutionsForThrowable;
 use Throwable;
