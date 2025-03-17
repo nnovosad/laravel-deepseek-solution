@@ -11,7 +11,7 @@
   ],
   "require": {
     "php": "^8.3",
-    "laravel/framework": "^11.0",
+    "laravel/framework": "^11.0 || ^12.0",
     "deepseek-php/deepseek-laravel": "^1.0"
   },
   "autoload": {
