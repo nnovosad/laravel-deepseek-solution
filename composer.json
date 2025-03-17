@@ -12,7 +12,7 @@
   "require": {
     "php": "^8.3",
     "laravel/framework": "^11.0 || ^12.0",
-    "deepseek-php/deepseek-laravel": "^1.0"
+    "deepseek-php/deepseek-laravel": "^2.0"
   },
   "autoload": {
     "psr-4": {
