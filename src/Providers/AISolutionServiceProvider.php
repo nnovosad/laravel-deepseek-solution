@@ -15,6 +15,7 @@ class AISolutionServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
+        $this->loadViewsFrom(dirname(__DIR__, 2) . '/resources/views', 'ai-solution');
     }
 
     public function register(): void
