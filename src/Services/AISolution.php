@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace NNovosad19\AISolution\Services;
 
-use DeepseekPhp\DeepseekClient;
+use Deepseek\DeepseekClient;
 use Illuminate\Support\Facades\Cache;
 use Spatie\Backtrace\Backtrace;
 use Spatie\Backtrace\Frame;
