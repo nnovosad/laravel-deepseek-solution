@@ -16,6 +16,10 @@ class AISolutionServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
+        $this->publishes([
+            dirname(__DIR__, 2) . '/config/ai-solution.php' => config_path('ai-solution.php'),
+        ], 'ai-solution-config');
+
         $this->loadViewsFrom(
             dirname(__DIR__, 2).'/resources/views',
             'ai-solution',
@@ -31,6 +35,11 @@ class AISolutionServiceProvider extends ServiceProvider
 
     public function register(): void
     {
+        $this->mergeConfigFrom(
+            dirname(__DIR__, 2) . '/config/ai-solution.php',
+            'ai-solution',
+        );
+
         $this->app->bind(ClientInterface::class, Client::class);
         $this->app->bind('DeepseekClient', DeepseekClient::class);
     }

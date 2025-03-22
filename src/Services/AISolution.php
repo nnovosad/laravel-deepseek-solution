@@ -42,8 +42,8 @@ class AISolution implements Solution
     {
         $response = $this->deepseek
             ->query($this->generatePrompt($this->throwable))
-            ->withModel(static::DEEPSEEK_MODEL)
-            ->setTemperature(static::DEEPSEEK_TEMPERATURE)
+            ->withModel(config('ai-solution.model'))
+            ->setTemperature(config('temperature'))
             ->run();
 
         $response = $this->decodeResponse($response);
@@ -52,7 +52,7 @@ class AISolution implements Solution
 
         return Cache::remember(
             $this->cacheKey,
-            now()->addHour(),
+            config('ai-solution.cache_ttl'),
             function () use ($response) {
                 return $response['choices'][0]['message']['content'];
             }
