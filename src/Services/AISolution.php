@@ -43,7 +43,7 @@ class AISolution implements Solution
         $response = $this->deepseek
             ->query($this->generatePrompt($this->throwable))
             ->withModel(config('ai-solution.model'))
-            ->setTemperature(config('temperature'))
+            ->setTemperature(config('ai-solution.temperature'))
             ->run();
 
         $response = $this->decodeResponse($response);
