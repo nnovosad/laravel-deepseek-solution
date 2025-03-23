@@ -18,19 +18,21 @@ class AISolutionServiceProvider extends ServiceProvider
     {
         $this->publishes([
             dirname(__DIR__, 2) . '/config/ai-solution.php' => config_path('ai-solution.php'),
-        ], 'ai-solution-config');
+        ], 'ai-solution');
 
         $this->loadViewsFrom(
             dirname(__DIR__, 2).'/resources/views',
             'ai-solution',
         );
 
-        $this->app->afterResolving(
-            SolutionProviderRepository::class,
-            function (SolutionProviderRepository $repository) {
-                $repository->registerSolutionProvider(AISolutionProvider::class);
-            }
-        );
+        if (config('ai-solution.enable')) {
+            $this->app->afterResolving(
+                SolutionProviderRepository::class,
+                function (SolutionProviderRepository $repository) {
+                    $repository->registerSolutionProvider(AISolutionProvider::class);
+                }
+            );
+        }
     }
 
     public function register(): void
