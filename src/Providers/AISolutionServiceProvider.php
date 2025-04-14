@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace NNovosad19\AISolution\Providers;
 
+use NNovosad19\AISolution\Handlers\CustomExceptionHandler;
 use DeepSeek\DeepSeekClient;
+use Illuminate\Contracts\Debug\ExceptionHandler;
 use NNovosad19\AISolution\Providers\AISolutionProvider;
 use GuzzleHttp\Client;
 use Illuminate\Support\ServiceProvider;
@@ -25,13 +27,17 @@ class AISolutionServiceProvider extends ServiceProvider
             'ai-solution',
         );
 
-        if (config('ai-solution.enable')) {
+        if (config('ai-solution.enable_ignition_solution')) {
             $this->app->afterResolving(
                 SolutionProviderRepository::class,
                 function (SolutionProviderRepository $repository) {
                     $repository->registerSolutionProvider(AISolutionProvider::class);
                 }
             );
+        }
+
+        if (config('ai-solution.enable_exception_solution')) {
+            $this->app->singleton(ExceptionHandler::class, CustomExceptionHandler::class);
         }
     }
 

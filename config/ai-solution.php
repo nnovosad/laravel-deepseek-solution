@@ -7,13 +7,23 @@ use NNovosad19\AISolution\Services\AISolution;
 return [
     /*
     |--------------------------------------------------------------------------
-    | Enable
+    | Enable ignition solution
     |--------------------------------------------------------------------------
     |
-    | Enable or disable module
+    | Enable or disable solution for ignition
     |
     */
-    'enable' => env('AI_SOLUTION_ENABLE', true),
+    'enable_ignition_solution' => env('AI_IGNITION_SOLUTION_ENABLE', true),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Enable exception solution
+    |--------------------------------------------------------------------------
+    |
+    | Enable or disable solution for exception
+    |
+    */
+    'enable_exception_solution' => env('AI_EXCEPTION_SOLUTION_ENABLE', true),
 
     /*
     |--------------------------------------------------------------------------

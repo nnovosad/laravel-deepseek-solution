@@ -16,7 +16,7 @@ class AISolution implements Solution
     private const string DEEPSEEK_MODEL = 'deepseek-chat';
     private const float DEEPSEEK_TEMPERATURE = 1.3;
 
-    protected string $solution;
+    public string $solution;
     protected DeepseekClient $deepseek;
     protected string $cacheKey;
 

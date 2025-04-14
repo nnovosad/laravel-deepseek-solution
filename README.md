@@ -41,7 +41,8 @@ After publishing the configuration files, add your DeepSeek API key to the .env 
 ## Optional Configuration
 You can customize the following settings in the ai-solution configuration file (config/ai-solution.php):
 
-- **enable**: Control module on/off (default: on).
+- **enable_ignition_solution**: Control module on/off enable ignition solution (default: on).
+- **enable_exception_solution**: Control module on/off enable exception solution (default: on).
 - **model**: The AI model to use (default: deepseek-chat).
 - **temperature**: Controls the randomness of the AI's responses (default: 1.3).
 - **cache_ttl**: Time-to-live for cached responses in seconds (default: 3600).
