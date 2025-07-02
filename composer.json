@@ -1,6 +1,6 @@
 {
   "name": "nnovosad19/ai-solution",
-  "description": "A Laravel package for DeepSeek AI Solution for ignition",
+  "description": "A Laravel package for DeepSeek AI Solution",
   "type": "library",
   "license": "MIT",
   "authors": [

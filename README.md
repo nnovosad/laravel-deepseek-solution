@@ -1,4 +1,4 @@
-# laravel-ignition-deepseek-solution
+# laravel-deepseek-solution
 
 Fix your Laravel exceptions with AI-powered solutions using DeepSeek. 
 This package integrates DeepSeek AI with Laravel Ignition to provide intelligent error solutions for your Laravel applications. 
@@ -57,4 +57,4 @@ Contributions are welcome! If you find a bug or have a feature request, please o
 This package is open-source software licensed under the [MIT license](https://opensource.org/license/MIT).
 
 ## Support
-If you encounter any issues or have questions, please open an issue on [GitHub](https://github.com/nnovosad/laravel-ignition-deepseek-solution).
+If you encounter any issues or have questions, please open an issue on [GitHub](https://github.com/nnovosad/laravel-deepseek-solution).
